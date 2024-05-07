@@ -1,0 +1,65 @@
+/* Explore.css */
+
+.explore :is(.section__subheader, .section__header) {
+    text-align: center;
+    margin-inline: auto;
+  }
+  
+  .explore__bg {
+    margin-top: 4rem;
+    padding-block: 3rem;
+    display: grid;
+    grid-template-columns:
+      minmax(1rem, 1fr)
+      minmax(0, var(--max-width))
+      minmax(1rem, 1fr);
+    background: linear-gradient(90deg, #FF0000, #000000); /* Red and black linear gradient */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px; /* Add border-radius for a rounded look */
+  }
+  
+  .explore__content {
+    grid-column: 2/3;
+    max-width: 400px;
+    margin: auto; /* Center content horizontally */
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9); /* White background with opacity */
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .explore__content p {
+    margin-bottom: 1rem; /* Adjust margin-bottom as needed */
+    color: #0c0a09; /* Dark text color */
+  }
+  
+  .explore__content h4 {
+    margin-bottom: 1.5rem; /* Adjust margin-bottom as needed */
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: #0c0a09; /* Dark text color */
+  }
+  
+  .explore__content .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #FF0000; /* Red button text color */
+    background-color: #000000; /* Black button background color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .explore__content .btn:hover {
+    background-color: #FF0000; /* Change button background color on hover */
+    color: #FFFFFF; /* Change button text color on hover */
+  }
+  .explore__bg .explore__image {
+    max-width: 60rem;
+    height: 30rem;
+  }

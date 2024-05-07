@@ -1,0 +1,84 @@
+.section__container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+  }
+  
+  .booking__container {
+    padding: 0;
+    margin-bottom: 4rem;
+  }
+  
+  .booking__form {
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #1a1a1a; /* Dark background color */
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3); /* Increased shadow */
+  }
+  
+  .input__group {
+    flex: 1 1 220px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem; /* Add margin between input groups */
+  }
+  
+  .input__group label {
+    flex-basis: 120px; /* Set a fixed width for the labels */
+  }
+  
+  .input__group span {
+    font-size: 1.75rem;
+    color: #e82574; /* Red accent color */
+  }
+  
+  .input__group label {
+    font-weight: 500;
+    color: #ffffff; /* White text color */
+  }
+  
+  .input__group input {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    padding-block: 5px;
+    color: #ffffff; /* White text color */
+    font-size: 0.9rem;
+    outline: none;
+    border: none;
+    background-color: transparent; /* Transparent background */
+    border-bottom: 1px solid #ffffff; /* White border */
+  }
+  
+  .input__group input::placeholder {
+    color: #78716c; /* Light text color */
+  }
+  
+  .input__btn {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff; /* White text color */
+    background-color: #e82574; /* Red accent color */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #bc1c5c; /* Darker red color on hover */
+  }
+  
