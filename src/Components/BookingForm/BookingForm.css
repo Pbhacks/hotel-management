@@ -2,11 +2,14 @@
     max-width: var(--max-width);
     margin: auto;
     padding: 5rem 1rem;
+    max-height: 900px;
   }
   
   .booking__container {
     padding: 0;
     margin-bottom: 4rem;
+    background-image: url('1.gif');
+    background-size: cover;
   }
   
   .booking__form {

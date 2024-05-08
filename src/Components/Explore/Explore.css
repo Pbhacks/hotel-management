@@ -1,65 +1,80 @@
 /* Explore.css */
 
-.explore :is(.section__subheader, .section__header) {
-    text-align: center;
-    margin-inline: auto;
-  }
-  
-  .explore__bg {
-    margin-top: 4rem;
-    padding-block: 3rem;
-    display: grid;
-    grid-template-columns:
-      minmax(1rem, 1fr)
-      minmax(0, var(--max-width))
-      minmax(1rem, 1fr);
-    background: linear-gradient(90deg, #FF0000, #000000); /* Red and black linear gradient */
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 10px; /* Add border-radius for a rounded look */
-  }
-  
-  .explore__content {
-    grid-column: 2/3;
-    max-width: 400px;
-    margin: auto; /* Center content horizontally */
-    padding: 2rem;
-    background-color: rgba(255, 255, 255, 0.9); /* White background with opacity */
-    border-radius: 5px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .explore__content p {
-    margin-bottom: 1rem; /* Adjust margin-bottom as needed */
-    color: #0c0a09; /* Dark text color */
-  }
-  
-  .explore__content h4 {
-    margin-bottom: 1.5rem; /* Adjust margin-bottom as needed */
-    font-size: 1.2rem;
-    font-weight: 600;
-    line-height: 1.5rem;
-    color: #0c0a09; /* Dark text color */
-  }
-  
-  .explore__content .btn {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #FF0000; /* Red button text color */
-    background-color: #000000; /* Black button background color */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .explore__content .btn:hover {
-    background-color: #FF0000; /* Change button background color on hover */
-    color: #FFFFFF; /* Change button text color on hover */
-  }
-  .explore__bg .explore__image {
-    max-width: 60rem;
-    height: 30rem;
-  }
+/* Center subheader and header */
+.explore .section__subheader,
+.explore .section__header {
+  text-align: center;
+  margin: auto;
+}
+
+/* Background styling */
+.explore__bg {
+  margin-top: 4rem;
+  padding: 3rem;
+  position: relative; /* Position relative for absolute positioning */
+  border-radius: 20px; /* Increased border-radius for a smoother look */
+}
+
+/* Content styling */
+.explore__content {
+  position: absolute;
+  top: 50%; /* Position at 50% from the top */
+  left: 50%; /* Position at 50% from the left */
+  transform: translate(-50%, -50%); /* Center the content */
+  max-width: 400px;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9); /* White background with opacity */
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(3px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.125);/* Adjusted box-shadow for better depth */
+  z-index: 1; /* Ensure content appears above the image */
+}
+
+/* Text styling */
+.explore__content p {
+  margin-bottom: 1rem;
+  color: white; /* Slightly darker text color */
+}
+
+.explore__content h4 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem; /* Increased font-size for better emphasis */
+  font-weight: 600;
+  line-height: 1.5;
+  color: white;
+}
+
+/* Button styling */
+.explore__content .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff; /* White button text color */
+  background-color: #FF0000; /* Red button background color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.explore__content .btn:hover {
+  background-color: #000; /* Darker background color on hover */
+}
+
+/* Image styling */
+.explore__bg .explore__image {
+  max-width: 100%; /* Ensure image doesn't exceed container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 20px; /* Apply border-radius to the image */
+}
+
+/* Responsive adjustment */
+#explore {
+  width: 100%; /* Ensure content fits within viewport */
+  background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100');
+  background-position: center;
+  max-height: 700px;
+}

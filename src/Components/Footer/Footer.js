@@ -1,12 +1,117 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Footer.css';
+
 const Footer = () => {
+  document.addEventListener("DOMContentLoaded", function() {
+    const musicContainer = document.getElementById("music-container");
+    const playButton = document.getElementById("play");
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+    const audio = document.getElementById("audio");
+    const progress = document.getElementById("progress");
+    const progressContainer = document.getElementById("progress-container");
+    const title = document.getElementById("title");
+    const cover = document.getElementById("cover");
+  });
+  useEffect(() => {
+    const musicContainer = document.getElementById("music-container");
+    const playButton = document.getElementById("play");
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
+    const audio = document.getElementById("audio");
+    const progress = document.getElementById("progress");
+    const progressContainer = document.getElementById("progress-container");
+    const title = document.getElementById("title");
+    const cover = document.getElementById("cover");
+
+    const songs = ["hey", "summer", "ukulele"];
+    let songIndex = 1;
+    
+    function getSongTitle(song) {
+      return song.charAt(0).toUpperCase() + song.slice(1);
+    }
+
+    function loadSong(song) {
+      title.innerText = getSongTitle(song);
+      audio.src = `https://github.com/bradtraversy/vanillawebprojects/blob/master/music-player/music/${song}.mp3?raw=true`;
+      cover.src = `https://github.com/bradtraversy/vanillawebprojects/blob/master/music-player/images/${song}.jpg?raw=true`;
+    }
+
+    function pauseSong() {
+      musicContainer.classList.remove("play");
+      playButton.querySelector("i").classList.remove("fa-pause");
+      playButton.querySelector("i").classList.add("fa-play");
+      audio.pause();
+    }
+    function playSong() {
+      musicContainer.classList.add("play");
+      playButton.querySelector("i").classList.remove("fa-play");
+      playButton.querySelector("i").classList.add("fa-pause");
+      audio.play();
+    }
+
+    function prevSong() {
+      songIndex--;
+      if (songIndex < 0) songIndex = songs.length - 1;
+      loadSong(songs[songIndex]);
+      playSong();
+    }
+
+    function nextSong() {
+      songIndex++;
+      if (songIndex > songs.length - 1) songIndex = 0;
+      loadSong(songs[songIndex]);
+      playSong();
+    }
+
+    function updateProgress(e) {
+      const { duration, currentTime } = e.target;
+      const progressPercent = (currentTime / duration) * 100;
+      progress.style.width = `${progressPercent}%`;
+    }
+
+    function setProgress(e) {
+      const width = this.clientWidth;
+      const clickX = e.offsetX;
+      const duration = audio.duration;
+      audio.currentTime = (clickX / width) * duration;
+    }
+
+    // Event Listeners
+    playButton.addEventListener("click", () => {
+      const isPlaying = musicContainer.classList.contains("play");
+      if (isPlaying) {
+        pauseSong();
+      } else {
+        playSong();
+      }
+    });
+
+    prevButton.addEventListener("click", prevSong);
+    nextButton.addEventListener("click", nextSong);
+
+    audio.addEventListener("timeupdate", updateProgress);
+    progressContainer.addEventListener("click", setProgress);
+
+    audio.addEventListener("ended", nextSong);
+
+    // Clean up event listeners
+    return () => {
+      playButton.removeEventListener("click", () => {});
+      prevButton.removeEventListener("click", prevSong);
+      nextButton.removeEventListener("click", nextSong);
+      audio.removeEventListener("timeupdate", updateProgress);
+      progressContainer.removeEventListener("click", setProgress);
+      audio.removeEventListener("ended", nextSong);
+    };
+  }, []); // Empty dependency array to ensure useEffect runs only once
+
   return (
     <footer className="footer" id="contact">
       <div className="section__container footer__container">
         <div className="footer__col">
-          <div className="logo">
-            <a href="#home"><img class="hmt" src="assets/logo.jpg" alt="logo" /></a>
+          <div className="logos">
+            <a href="#home"><img className="hmt" src="assets/logo.jpg" alt="logo" /></a>
           </div>
           <p className="section__description">
             Discover a world of comfort, luxury, and adventure as you explore
@@ -37,7 +142,7 @@ const Footer = () => {
         <div className="footer__col">
           <h4>CONTACT US</h4>
           <ul className="footer__links">
-            <li><a href="#">rayalpark@info.com</a></li>
+            <li><a href="#">rcop@info.com</a></li>
           </ul>
           <div className="footer__socials">
             <a href="#"><img src="assets/facebook.png" alt="facebook" /></a>
@@ -48,7 +153,37 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer__bar">
-        Copyright © 2023 Web Design Mastery. All rights reserved.
+        Copyright © 2024 pbHACKS ~ Dr.Priyant, All rights reserved.
+      </div>
+      <div className="music-container" id="music-container">
+        <div className="music-info">
+          <h2 id="title" className="title"></h2>
+          <div className="progress-container" id="progress-container">
+            <div className="progress" id="progress"></div>
+          </div>
+        </div>
+        <audio
+          src="https://github.com/bradtraversy/vanillawebprojects/blob/master/music-player/music/summer.mp3?raw=true"
+          id="audio"
+        ></audio>
+        <div className="img-container">
+          <img
+            src="https://github.com/bradtraversy/vanillawebprojects/blob/master/music-player/images/summer.jpg?raw=true"
+            alt="music-cover"
+            id="cover"
+          />
+        </div>
+        <div className="navigation">
+          <button id="prev" className="action-btn">
+            <i className="fas fa-backward"></i>
+          </button>
+          <button id="play" className="action-btn action-btn-big">
+            <i className="fas fa-play"></i>
+          </button>
+          <button id="next" className="action-btn">
+            <i className="fas fa-forward"></i>
+          </button>
+        </div>
       </div>
     </footer>
   );

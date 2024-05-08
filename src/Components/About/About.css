@@ -6,39 +6,47 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background-color: #1a1a1a;
+    background-color: rgba(0, 0, 0, 0.9); /* Updated to black with transparency */
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .about__content {
+    backdrop-filter: blur(10px); /* Glass morphism effect */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Glass morphism shadow */
+    transition: background-color 0.3s ease-in-out; /* Transition effect */
+
+}
+
+.about__content {
     max-width: 600px;
     text-align: center;
-  }
-  
-  .section__subheader {
+    transition: transform 0.3s ease-in-out; /* Slide-in transition effect */
+}
+
+.about__container:hover .about__content {
+    transform: translateX(-20px); /* Slide to the left on hover */
+}
+
+.section__subheader {
     margin-bottom: 0.5rem;
     position: relative;
     font-weight: 500;
     letter-spacing: 2px;
     color: #ffffff;
-  }
-  
-  .section__header {
+}
+
+.section__header {
     margin-bottom: 1rem;
     font-size: 2.5rem;
     font-weight: 600;
     line-height: 3rem;
     color: #ffffff;
-  }
-  
-  .section__description {
+}
+
+.section__description {
     margin-bottom: 1rem;
     color: #b0b0b0;
-  }
-  
-  .about__image img {
+}
+
+.about__image img {
     display: block;
     max-width: 450px;
     height: auto;
@@ -46,19 +54,19 @@
     border-radius: 10px;
     filter: grayscale(80%);
     transition: filter 0.3s ease-in-out;
-  }
-  
-  .about__image img:hover {
+}
+
+.about__image img:hover {
     filter: grayscale(0%);
-  }
-  
-  .about__btn {
+}
+
+.about__btn {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
-  }
-  
-  .about__btn .btn {
+}
+
+.about__btn .btn {
     padding: 0.75rem 1.5rem;
     border: none;
     outline: none;
@@ -69,9 +77,8 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-  }
-  
-  .about__btn .btn:hover {
+}
+
+.about__btn .btn:hover {
     background-color: #bc1c5c;
-  }
-  
+}

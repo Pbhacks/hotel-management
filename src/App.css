@@ -8,13 +8,26 @@
   --text-dark: #0c0a09;
   --text-light: #78716c;
   --white: #ffffff;
-  --max-width: 1200px;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.section__container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Add other global styles here */
