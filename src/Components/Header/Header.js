@@ -27,7 +27,7 @@ const Header = () => {
           <li><a href="#explore">Explore</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-        <button className="btn nav__btn">Book Now</button>
+        <button className="btn nav__btn">Login</button>
       </nav>
       <div className="section__container header__container" id="home">
         <p>Simple - Unique - Friendly</p>
