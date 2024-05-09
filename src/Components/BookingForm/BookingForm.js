@@ -55,10 +55,10 @@ const BookingForm = () => {
           </div>
         </div>
         <div className="input__group">
-          <button className="btn" onClick={handleCheckIn}>Check In</button>
+          <button className="btn" id="apk" onClick={handleCheckIn}>Check In</button>
         </div>
         <div className="input__group input__btn">
-          <button className="btn">CHECK OUT</button>
+          <button className="btn" id="apk">CHECK OUT</button>
         </div>
       </form>
     </section>
