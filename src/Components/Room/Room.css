@@ -64,7 +64,6 @@
 .room__card p {
   margin-bottom: 0.5rem;
   color: var(--text-light);
-  
 }
 
 .room__card h5 {
@@ -112,10 +111,10 @@
   color: white; /* Change color to white */
 }
 .room__container {
-  background-image: url('3.gif');
+  background-image: url("3.gif");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   max-height: 900px; /* Adjust the maximum width as needed */
   margin: 0 auto;
-} 
+}

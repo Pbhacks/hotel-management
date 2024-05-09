@@ -1,9 +1,8 @@
-import React from 'react';
-import './About.css';
+import React from "react";
+import "./About.css";
 // Import necessary packages
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FaArrowRight } from 'react-icons/fa'; 
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaArrowRight } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -21,13 +20,13 @@ const About = () => {
           excitement.
         </p>
         <div className="about__btn">
-    <button className="btn">
-        Read More <FaArrowRight /> {/* Add the icon component */}
-    </button>
-</div>
+          <button className="btn">
+            Read More <FaArrowRight /> {/* Add the icon component */}
+          </button>
+        </div>
       </div>
     </section>
   );
-}
+};
 
 export default About;
