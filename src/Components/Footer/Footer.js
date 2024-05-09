@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Footer.css';
 
 const Footer = () => {
-  
+  const [isMusicPlaying, setIsMusicPlaying] = useState(true); // State to track music playback
+
+  // Function to toggle music playback
+  const toggleMusic = () => {
+    setIsMusicPlaying(prevState => !prevState);
+  };
+
   return (
     <footer className="footer" id="contact">
       <div className="section__container footer__container">
@@ -55,7 +61,7 @@ const Footer = () => {
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/97n53FxlCnU?autoplay=1&loop=1&playlist=97n53FxlCnU"
+        src={`https://www.youtube.com/embed/97n53FxlCnU?autoplay=${isMusicPlaying ? 1 : 0}&loop=1&playlist=97n53FxlCnU`}
         frameBorder="0"
         allow="autoplay=1; encrypted-media"
         allowFullScreen
