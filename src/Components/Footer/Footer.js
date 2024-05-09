@@ -2,15 +2,7 @@ import React from 'react';
 import './Footer.css';
 
 const Footer = () => {
-  document.addEventListener("DOMContentLoaded", function() {
-    // Your existing code for DOMContentLoaded event listener
-  });
-  window.addEventListener("DOMContentLoaded", event => {
-    const audio = document.querySelector("audio");
-    audio.volume = 0.2;
-    audio.play();
-  });
-
+  
   return (
     <footer className="footer" id="contact">
       <div className="section__container footer__container">
@@ -60,18 +52,15 @@ const Footer = () => {
       <div className="footer__bar">
         Copyright © 2024 pbHACKS ~ Dr.Priyant, All rights reserved.
       </div>
-      <div>
-      <audio src="https://www.youtube.com/embed/97n53FxlCnU?autoplay=1&loop=1&playlist=97n53FxlCnU"></audio>
-      /*<iframe
-        width="0"
-        height="0"
+      <iframe
+        width="560"
+        height="315"
         src="https://www.youtube.com/embed/97n53FxlCnU?autoplay=1&loop=1&playlist=97n53FxlCnU"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
+        frameBorder="0"
+        allow="autoplay=1; encrypted-media"
+        allowFullScreen
         title="Background Music"
-      ></iframe>*/
-        </div>
+      ></iframe>
     </footer>
   );
 }

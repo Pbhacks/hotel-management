@@ -20,14 +20,17 @@ const Header = () => {
             {isOpen ? <RiCloseLine /> : <RiMenuLine />}
           </div>
         </div>
+        
         <ul className={`nav__links ${isOpen ? 'open' : ''}`}>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#service">Services</a></li>
           <li><a href="#explore">Explore</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact"><button id="nb1">Music</button></a></li>
         </ul>
         <button className="btn nav__btn">Login</button>
+        
       </nav>
       <div className="section__container header__container" id="home">
         <p>Simple - Unique - Friendly</p>
