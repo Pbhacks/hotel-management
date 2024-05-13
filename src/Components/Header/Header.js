@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { RiMenuLine, RiCloseLine } from 'react-icons/ri'; // Import React Icons for menu icons
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 import { RiIconName } from 'react-icons/ri';
 const Header = () => {
@@ -20,11 +21,11 @@ const Header = () => {
             {isOpen ? <RiCloseLine /> : <RiMenuLine />}
           </div>
         </div>
-        
         <ul className={`nav__links ${isOpen ? 'open' : ''}`}>
-          <li><a href="#home">Home</a></li>
+          {/* <li><a href="#home">Home</a></li> */}
+          <li><NavLink to="/">Home</NavLink></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#service">Services</a></li>
+          <li><NavLink to="/ServicePage">Services</NavLink></li>
           <li><a href="#explore">Explore</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#contact"><button id="nb1">Music</button></a></li>

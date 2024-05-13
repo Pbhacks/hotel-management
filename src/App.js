@@ -1,25 +1,40 @@
 import React from 'react';
 import './App.css'; // Import your CSS file
 import Header from './Components/Header/Header';
+import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import ServicePage from './Components/ServicePage/ServicePage';
 import BookingForm from './Components/BookingForm/BookingForm';
 import About from './Components/About/About';
 import Room from './Components/Room/Room';
 import Service from './Components/Service/Service';
 import Explore from './Components/Explore/Explore';
 import Footer from './Components/Footer/Footer';
+import Food from  './Components/Food/Food';
+import Navbar from './Components/Menu/Navbar';
+
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <BookingForm />
-      <About />
-      <Room />
-      <Service />
-      <Explore />
-      <Footer />
-    
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/ServicePage" element={<ServicePage />} />
+          <Route path="/" element={
+            <>
+              <BookingForm />
+              <About />
+              <Room />
+              <Service />
+              <Explore />
+               <Food />
+              <Footer />
+            </>
+          } />
+         <Route path="/Menu" element={<Navbar />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
  /*<iframe

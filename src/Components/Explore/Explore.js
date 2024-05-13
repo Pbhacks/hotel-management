@@ -1,5 +1,6 @@
 import React from 'react';
 import './Explore.css';
+import { NavLink } from 'react-router-dom';
 
 const Explore = () => {
   return (
@@ -11,7 +12,7 @@ const Explore = () => {
         <div className="explore__content">
           <p className="section__description">10th MAR 2023</p>
           <h4>A New Menu Is Available In Our Hotel.</h4>
-          <button className="btn">Continue</button>
+          <button className="btn"><NavLink to="/Menu">Continue</NavLink></button>
         </div>
       </div>
     </section>
