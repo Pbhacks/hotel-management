@@ -8,6 +8,7 @@ import { FaArrowRight } from 'react-icons/fa';
 const About = () => {
   return (
     <section className="section__container about__container" id="about">
+      <div className="about__background"></div>
       <div className="about__image">
         <img src="assets/about.jpg" alt="about" />
       </div>

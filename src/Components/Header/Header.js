@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { RiMenuLine, RiCloseLine } from 'react-icons/ri'; // Import React Icons for menu icons
+import { RiMenuLine, RiCloseLine } from 'react-icons/ri'; 
 import './Header.css';
-import { RiIconName } from 'react-icons/ri';
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,7 +14,7 @@ const Header = () => {
       <nav>
         <div className="nav__bar">
           <div className="logo">
-            <a href="#"><img class="hmt" src="assets/logo.jpg" alt="logo" /></a>
+            <a href="#"><img className="hmt" src="assets/logo.jpg" alt="logo" /></a>
           </div>
           <div className="nav__menu__btn" id="menu-btn" onClick={toggleMenu}>
             {isOpen ? <RiCloseLine /> : <RiMenuLine />}
@@ -23,7 +23,7 @@ const Header = () => {
         
         <ul className={`nav__links ${isOpen ? 'open' : ''}`}>
           <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
+          <li><a href="#about">About</a></li> {/* Update link to use a href */}
           <li><a href="#service">Services</a></li>
           <li><a href="#explore">Explore</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -37,6 +37,7 @@ const Header = () => {
         <h1>Make Yourself At Home<br />In Our <span>Hotel</span>.</h1>
       </div>
     </header>
+    
   );
 }
 

@@ -8,6 +8,8 @@ import Service from './Components/Service/Service';
 import Explore from './Components/Explore/Explore';
 import Footer from './Components/Footer/Footer';
 
+
+
 function App() {
   return (
     <div className="App">
@@ -18,17 +20,10 @@ function App() {
       <Service />
       <Explore />
       <Footer />
-    
+      
     </div>
+    
   );
 }
- /*<iframe
-        width="0"
-        height="0"
-        src="https://www.youtube.com/embed/97n53FxlCnU?autoplay=1&loop=1&playlist=97n53FxlCnU"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-        title="Background Music"
-      ></iframe>*/
+
 export default App;
