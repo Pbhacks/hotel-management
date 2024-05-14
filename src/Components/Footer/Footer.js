@@ -63,7 +63,7 @@ const Footer = () => {
         height="315"
         src={`https://www.youtube.com/embed/97n53FxlCnU?autoplay=${isMusicPlaying ? 1 : 0}&loop=1&playlist=97n53FxlCnU`}
         frameBorder="0"
-        allow="autoplay=1; encrypted-media"
+        allow="autoplay; encrypted-media"
         allowFullScreen
         title="Background Music"
       ></iframe>
