@@ -9,7 +9,20 @@
     color: #ffffff;
     font-family: Arial, sans-serif;
 }
-
+.homeButton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #ff7f50;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .homeButton:hover {
+    background-color: #ff5722;
+  }
 .service1, .service2, .service3 {
     padding: 20px;
     background-color: #ffffff;

@@ -11,17 +11,20 @@ import Explore from './Components/Explore/Explore';
 import Footer from './Components/Footer/Footer';
 import Food from  './Components/Food/Food';
 import Navbar from './Components/Menu/Navbar';
+import LoginForm from './Components/Login/LoginForm';
 
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+       
         <Routes>
           <Route path="/ServicePage" element={<ServicePage />} />
+          <Route path="/Login" element={<LoginForm />} />
           <Route path="/" element={
-            <>
+            <> 
+              <Header />
               <BookingForm />
               <About />
               <Room />

@@ -3,6 +3,7 @@ import { RiMenuLine, RiCloseLine } from 'react-icons/ri'; // Import React Icons 
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 import { RiIconName } from 'react-icons/ri';
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -30,7 +31,7 @@ const Header = () => {
           <li><a href="#contact">Contact</a></li>
           <li><a href="#contact"><button id="nb1">Music</button></a></li>
         </ul>
-        <button className="btn nav__btn">Login</button>
+        <button className="btn nav__btn"><NavLink to={"/Login"}>Login</NavLink></button>
         
       </nav>
       <div className="section__container header__container" id="home">

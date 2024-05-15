@@ -1,11 +1,15 @@
 import React from "react";
 import "./ServicePage.css";
+import { Link } from "react-router-dom";
 
 const ServicePage = () => {
   return (
     <div className="servicePage">
+       
     <section className="service1" id="Service0">
+    <Link to="/" className="homeButton">Home</Link>
       <h2>Our Services</h2>
+
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
         nulla vitae laoreet augue. Donec consectetur elit nec leo rutrum
