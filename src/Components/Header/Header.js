@@ -30,6 +30,7 @@ const Header = () => {
           <li><a href="#explore">Explore</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#contact"><button id="nb1">Music</button></a></li>
+          <li><NavLink to="/ProfileSettings">Settings</NavLink></li>
         </ul>
         <button className="btn nav__btn"><NavLink to={"/Login"}>Login</NavLink></button>
         

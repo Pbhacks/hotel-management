@@ -12,6 +12,7 @@ import Footer from './Components/Footer/Footer';
 import Food from  './Components/Food/Food';
 import Navbar from './Components/Menu/Navbar';
 import LoginForm from './Components/Login/LoginForm';
+import ProfileSettings from './Components/ProfileSettings/ProfileSettings';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/ServicePage" element={<ServicePage />} />
           <Route path="/Login" element={<LoginForm />} />
+          <Route path="/ProfileSettings" element={<ProfileSettings />} />
           <Route path="/" element={
             <> 
               <Header />
