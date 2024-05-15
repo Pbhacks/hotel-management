@@ -4,6 +4,7 @@ import { getAuth, onAuthStateChanged, updateEmail, updatePassword, updateProfile
 import { getStorage, ref } from 'firebase/storage';
 import { getDatabase, ref as databaseRef, update } from 'firebase/database';
 import { firebaseConfig } from '../Login/firebase';
+import './ProfileSettings.css';
 
 // Initialize the Firebase app
 const app = initializeApp(firebaseConfig);
@@ -102,131 +103,193 @@ function ProfileSettings() {
   };
 
 
-return (
-    <div style={{ backgroundColor: '#f8f8f8', padding: '20px' }}>
-      <h1 style={{ color: '#333', fontFamily: 'Georgia, serif', textAlign: 'center' }}>Profile Settings</h1>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <div style={{ width: '300px', textAlign: 'center' }}>
-          <img
-            src={profilePic || user?.photoURL || 'https://via.placeholder.com/150'}
-            alt="Profile"
-            style={{ width: '150px', height: '150px', borderRadius: '50%', objectFit: 'cover' }}
-          />
-          <input
-            type="file"
-            accept="image/*"
-            onChange={handleProfilePicChange}
-            style={{ display: 'block', margin: '10px auto' }}
-          />
-        </div>
-      </div>
-      <div style={{ maxWidth: '500px', margin: '0 auto' }}>
-        <div style={{ marginBottom: '20px' }}>
-          <label htmlFor="email" style={{ display: 'block', fontFamily: 'Georgia, serif', color: '#333' }}>
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={handleEmailChange}
-            style={{
-              width: '100%',
-              padding: '10px',
-              border: '1px solid #ccc',
-              borderRadius: '4px',
-              fontFamily: 'Georgia, serif',
-            }}
-          />
-        </div>
-        <div style={{ marginBottom: '20px' }}>
-          <label htmlFor="password" style={{ display: 'block', fontFamily: 'Georgia, serif', color: '#333' }}>
-            New Password
-          </label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={handlePasswordChange}
-            style={{
-              width: '100%',
-              padding: '10px',
-              border: '1px solid #ccc',
-              borderRadius: '4px',
-              fontFamily: 'Georgia, serif',
-            }}
-          />
-        </div>
-        <div style={{ marginBottom: '20px' }}>
-          <label htmlFor="confirmPassword" style={{ display: 'block', fontFamily: 'Georgia, serif', color: '#333' }}>
-            Confirm Password
-          </label>
-          <input
-            type="password"
-            id="confirmPassword"
-            value={confirmPassword}
-            onChange={handleConfirmPasswordChange}
-            style={{
-              width: '100%',
-              padding: '10px',
-              border: '1px solid #ccc',
-              borderRadius: '4px',
-              fontFamily: 'Georgia, serif',
-            }}
-          />
-        </div>
-        <div style={{ marginBottom: '20px' }}>
-          <label htmlFor="dateOfBirth" style={{ display: 'block', fontFamily: 'Georgia, serif', color: '#333' }}>
-            Date of Birth
-          </label>
-          <input
-            type="date"
-            id="dateOfBirth"
-            value={dateOfBirth}
-            onChange={handleDateOfBirthChange}
-            style={{
-              width: '100%',
-              padding: '10px',
-              border: '1px solid #ccc',
-              borderRadius: '4px',
-              fontFamily: 'Georgia, serif',
-            }}
-          />
-        </div>
-        <div style={{ marginBottom: '20px' }}>
-          <label htmlFor="otherDetails" style={{ display: 'block', fontFamily: 'Georgia, serif', color: '#333' }}>
-            Other Details
-          </label>
-          <textarea
-            id="otherDetails"
-            value={otherDetails}
-            onChange={handleOtherDetailsChange}
-            style={{
-              width: '100%',
-              padding: '10px',
-              border: '1px solid #ccc',
-              borderRadius: '4px',
-              fontFamily: 'Georgia, serif',
-              resize: 'vertical',
-            }}
-          />
-        </div>
-        <button
-          onClick={handleSaveChanges}
+  return (
+    <div
+      style={{
+        backgroundImage: 'linear-gradient(to bottom right, #dcd3c6, #e0d3c2, #e4d5ba, #eaded9, #f5e9ea)',
+        height: '100vh',
+        width: '100vw',
+        padding: '40px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <div
+        style={{
+          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          backdropFilter: 'blur(10px)',
+          borderRadius: '10px',
+          padding: '40px',
+          boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)',
+          animation: 'fadeIn 1s ease',
+        }}
+      >
+        <h1
           style={{
-            display: 'block',
-            margin: '0 auto',
-            backgroundColor: '#333',
-            color: '#fff',
-            padding: '10px 20px',
-            border: 'none',
-            borderRadius: '4px',
-            fontFamily: 'Georgia, serif',
-            cursor: 'pointer',
+            color: '#333',
+            fontFamily: 'Playfair Display, serif',
+            fontWeight: 700,
+            textAlign: 'center',
+            textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)',
           }}
         >
-          Save Changes
-        </button>
+          Profile Settings
+        </h1>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{ width: '300px', textAlign: 'center' }}>
+            <img
+              src={profilePic || user?.photoURL || 'https://via.placeholder.com/150'}
+              alt="Profile"
+              style={{
+                width: '150px',
+                height: '150px',
+                borderRadius: '50%',
+                objectFit: 'cover',
+                border: '5px solid #c0a062',
+                boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)',
+              }}
+            />
+            <input
+              type="file"
+              accept="image/*"
+              onChange={handleProfilePicChange}
+              style={{
+                display: 'block',
+                margin: '10px auto',
+                backgroundColor: '#c0a062',
+                color: '#fff',
+                border: 'none',
+                padding: '10px 20px',
+                fontFamily: 'Cormorant Garamond, serif',
+                borderRadius: '4px',
+                cursor: 'pointer',
+                transition: 'background-color 0.3s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#b08e4b';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = '#c0a062';
+              }}
+            />
+          </div>
+        </div>
+        <div style={{ maxWidth: '500px', margin: '0 auto' }}>
+          <div style={{ marginBottom: '20px' }}>
+            <label htmlFor="email" style={{ display: 'block', fontFamily: 'Cormorant Garamond, serif', color: '#333' }}>
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={handleEmailChange}
+              style={{
+                width: '100%',
+                padding: '10px',
+                border: '1px solid #ccc',
+                borderRadius: '4px',
+                fontFamily: 'Cormorant Garamond, serif',
+              }}
+            />
+          </div>
+          <div style={{ marginBottom: '20px' }}>
+            <label htmlFor="password" style={{ display: 'block', fontFamily: 'Cormorant Garamond, serif', color: '#333' }}>
+              New Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={handlePasswordChange}
+              style={{
+                width: '100%',
+                padding: '10px',
+                border: '1px solid #ccc',
+                borderRadius: '4px',
+                fontFamily: 'Cormorant Garamond, serif',
+              }}
+            />
+          </div>
+          <div style={{ marginBottom: '20px' }}>
+            <label htmlFor="confirmPassword" style={{ display: 'block', fontFamily: 'Cormorant Garamond, serif', color: '#333' }}>
+              Confirm Password
+            </label>
+            <input
+              type="password"
+              id="confirmPassword"
+              value={confirmPassword}
+              onChange={handleConfirmPasswordChange}
+              style={{
+                width: '100%',
+                padding: '10px',
+                border: '1px solid #ccc',
+                borderRadius: '4px',
+                fontFamily: 'Cormorant Garamond, serif',
+              }}
+            />
+          </div>
+          <div style={{ marginBottom: '20px' }}>
+            <label htmlFor="dateOfBirth" style={{ display: 'block', fontFamily: 'Cormorant Garamond, serif', color: '#333' }}>
+              Date of Birth
+            </label>
+            <input
+              type="date"
+              id="dateOfBirth"
+              value={dateOfBirth}
+              onChange={handleDateOfBirthChange}
+              style={{
+                width: '100%',
+                padding: '10px',
+                border: '1px solid #ccc',
+                borderRadius: '4px',
+                fontFamily: 'Cormorant Garamond, serif',
+              }}
+            />
+          </div>
+          <div style={{ marginBottom: '20px' }}>
+            <label htmlFor="otherDetails" style={{ display: 'block', fontFamily: 'Cormorant Garamond, serif', color: '#333' }}>
+              Other Details
+            </label>
+            <textarea
+              id="otherDetails"
+              value={otherDetails}
+              onChange={handleOtherDetailsChange}
+              style={{
+                width: '100%',
+                padding: '10px',
+                border: '1px solid #ccc',
+                borderRadius: '4px',
+                fontFamily: 'Cormorant Garamond, serif',
+                resize: 'vertical',
+              }}
+            />
+          </div>
+          <button
+            onClick={handleSaveChanges}
+            style={{
+              display: 'block',
+              margin: '0 auto',
+              backgroundColor: '#c0a062',
+              color: '#fff',
+              padding: '10px 20px',
+              border: 'none',
+              borderRadius: '4px',
+              fontFamily: 'Cormorant Garamond, serif',
+              cursor: 'pointer',
+              transition: 'background-color 0.3s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = '#b08e4b';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = '#c0a062';
+            }}
+          >
+            Save Changes
+          </button>
+        </div>
       </div>
     </div>
   );
