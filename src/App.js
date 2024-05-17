@@ -13,7 +13,7 @@ import Food from  './Components/Food/Food';
 import Navbar from './Components/Menu/Navbar';
 import LoginForm from './Components/Login/LoginForm';
 import ProfileSettings from './Components/ProfileSettings/ProfileSettings';
-
+import Gallery from './Components/Menu/Gallery';
 
 function App() {
   return (
