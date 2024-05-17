@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { RiMenuLine, RiCloseLine } from 'react-icons/ri'; 
 import './Header.css';
+
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,16 +22,17 @@ const Header = () => {
             {isOpen ? <RiCloseLine /> : <RiMenuLine />}
           </div>
         </div>
-        
         <ul className={`nav__links ${isOpen ? 'open' : ''}`}>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li> {/* Update link to use a href */}
-          <li><a href="#service">Services</a></li>
+
+          <li><NavLink to="/">Home</NavLink></li>
+          <li><a href="#about">About</a></li>
+          <li><NavLink to="/ServicePage">Services</NavLink></li>
           <li><a href="#explore">Explore</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#contact"><button id="nb1">Music</button></a></li>
+          <li><NavLink to="/ProfileSettings">Settings</NavLink></li>
         </ul>
-        <button className="btn nav__btn">Login</button>
+        <button className="btn nav__btn"><NavLink to={"/Login"}>Login</NavLink></button>
         
       </nav>
       <div className="section__container header__container" id="home">
