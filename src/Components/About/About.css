@@ -82,3 +82,10 @@
 .about__btn .btn:hover {
     background-color: #bc1c5c;
 }
+.about__background{
+    position: absolute;
+  inset: 0;
+  background-image: url('image-full.png');
+  background-size: cover;
+  background-position: center;
+}

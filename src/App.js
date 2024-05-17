@@ -15,8 +15,11 @@ import LoginForm from './Components/Login/LoginForm';
 import ProfileSettings from './Components/ProfileSettings/ProfileSettings';
 
 
+
+
 function App() {
   return (
+
     <BrowserRouter>
       <div className="App">
        
@@ -40,15 +43,8 @@ function App() {
         </Routes>
       </div>
     </BrowserRouter>
+
   );
 }
- /*<iframe
-        width="0"
-        height="0"
-        src="https://www.youtube.com/embed/97n53FxlCnU?autoplay=1&loop=1&playlist=97n53FxlCnU"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-        title="Background Music"
-      ></iframe>*/
+
 export default App;
