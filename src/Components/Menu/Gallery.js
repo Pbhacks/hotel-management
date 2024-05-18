@@ -55,19 +55,44 @@ class Gallery extends Component {
         ]
       },
       // add more categories here
-    ]
+    ],
+    activeCategory: null
+    
   };
+  toggleCategory = (category) => {
+    this.setState((prevState) => ({
+      activeCategory: prevState.activeCategory === category ? null : category
+    }));
+  };
+
 
   render() {
     return (
       <div className="gallery-container">
         {this.state.menuItems.map((category, index) => (
-          <div key={index} className="category-container">
-            <h2 className="category-title">{category.category}</h2>
-            <div className="item-container">
+          <div
+            key={index}
+            className="category-container"
+            id={category.category.replace(/\s+/g, '')} // Remove spaces from category name
+          >
+            <h2
+              className="category-title"
+              onClick={() => this.toggleCategory(category.category)}
+            >
+              {category.category}
+            </h2>
+            <div
+              className={`item-container ${
+                this.state.activeCategory === category.category ? "show" : ""
+              }`}
+            >
               {category.items.map((item) => (
                 <div key={item.id} className="item-box">
-                  <img src={require(`./menu-images/${item.image}`)} alt={item.name} className="item-image" />
+                  <img
+                    src={require(`./menu-images/${item.image}`)}
+                    alt={item.name}
+                    className="item-image"
+                  />
                   <h3 className="item-name">{item.name}</h3>
                   <p className="item-price">₹ {item.price}</p>
                 </div>
