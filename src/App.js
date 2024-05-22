@@ -14,7 +14,7 @@ import Navbar from './Components/Menu/Navbar';
 import LoginForm from './Components/Login/LoginForm';
 import ProfileSettings from './Components/ProfileSettings/ProfileSettings';
 import Gallery from './Components/Menu/Gallery';
-
+import BookingPage from './Components/BookingForm/BookingPage';
 
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
           <Route path="/ServicePage" element={<ServicePage />} />
           <Route path="/Login" element={<LoginForm />} />
           <Route path="/ProfileSettings" element={<ProfileSettings />} />
+          <Route path='/BookingPage' element={<BookingPage />} />
           <Route path="/" element={
             <> 
               <Header />
