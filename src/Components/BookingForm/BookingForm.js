@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css'; // Import the CSS file
 import './BookingForm.css';
+import { NavLink } from 'react-router-dom';
+import BookingPage from './BookingPage';
 
 const BookingForm = () => {
   const [checkInDate, setCheckInDate] = useState(null);
@@ -59,8 +61,12 @@ const BookingForm = () => {
         </div>
         <div className="input__group input__btn">
           <button className="btn" id="apk">CHECK OUT</button>
+          <button className="btn" id="apk"><NavLink to={"/BookingPage"} >CONTINUE</NavLink></button>
         </div>
       </form>
+
+         
+      
     </section>
   );
 }
