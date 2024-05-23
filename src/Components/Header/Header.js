@@ -24,15 +24,15 @@ const Header = () => {
         </div>
         <ul className={`nav__links ${isOpen ? 'open' : ''}`}>
 
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><a href="#about">About</a></li>
-          <li><NavLink to="/ServicePage">Services</NavLink></li>
-          <li><a href="#explore">Explore</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#contact"><button id="nb1">Music</button></a></li>
+        <NavLink to="/"><li>Home</li></NavLink>
+        <a href="#about"><li>About</li></a>
+        <NavLink to="/ServicePage"><li>Services</li></NavLink>
+        <a href="#explore"><li>Explore</li></a>
+        <a href="#contact"><li>Contact</li></a>
+        <a href="#contact"><li><button id="nb1">Music</button></li></a>
           <li><NavLink to="/ProfileSettings">Settings</NavLink></li>
         </ul>
-        <button className="btn nav__btn"><NavLink to={"/Login"}>Login</NavLink></button>
+        <NavLink to={"/Login"}><button className="btn nav__btn" src="/Login">LOGIN</button></NavLink>
         
       </nav>
       <div className="section__container header__container" id="home">
