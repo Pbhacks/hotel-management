@@ -15,6 +15,7 @@ nav {
   max-width: var(--max-width);
   margin: auto;
   z-index: 9;
+  background-color: transparent; /* Make the navbar background transparent */
 }
 .nav__links {
   list-style: none;
@@ -25,7 +26,7 @@ nav {
   align-items: center;
   flex-direction: column;
   gap: 2rem;
-  background-color: rgba(188, 28, 92, 0.9);
+  background-color: rgba(188, 28, 92, 0.9); /* Adjust transparency as needed */
   transform: translateY(-100%);
   transition: 0.5s;
   z-index: -1;
@@ -50,7 +51,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  background-color: var(--primary-color);
+  background-color: transparent; /* Make the navbar bar background transparent */
 }
 .nav__menu__btn {
   font-size: 1.5rem;
@@ -81,7 +82,7 @@ nav {
     position: static;
     transform: none;
     flex-direction: row;
-    background-color: transparent;
+    background-color: transparent; /* Make the nav links background transparent */
   }
 
   .nav__btn {
@@ -120,11 +121,11 @@ nav {
   text-align: center;
   opacity: 0.6;
   background: rgba( 255, 255, 255, 0.1 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 7.5px );
--webkit-backdrop-filter: blur( 7.5px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 7.5px );
+  -webkit-backdrop-filter: blur( 7.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .header__container h1 {
@@ -136,11 +137,11 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   margin-bottom: 20rem;
   
   background: rgba( 255, 255, 255, 0.1 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 7.5px );
--webkit-backdrop-filter: blur( 7.5px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 7.5px );
+  -webkit-backdrop-filter: blur( 7.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .header__container h1 span {
