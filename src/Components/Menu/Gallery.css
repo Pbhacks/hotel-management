@@ -15,7 +15,7 @@
 }
 
 .category-title {
-  background-color: #17cf97;
+  background-color: #4169e1;
   color: white;
   padding: 15px; /* Increase padding for better spacing */
   margin: 0;
@@ -28,7 +28,7 @@
 }
 
 .category-title:hover {
-  background-color: #14b583;
+  background-color: #e50914;
 }
 
 .item-container {
@@ -71,5 +71,5 @@
   margin: 0;
   font-size: 1.1rem;
   font-weight: bold;
-  color: #17cf97;
+  color: #4169e1;
 }
