@@ -83,12 +83,6 @@ Enjoy the background music while you browse.
 YouTube Music Frame:
 Play continuous music using the embedded YouTube player.
 
-Project Structure
-Here's an overview of the project structure:
-
-༄✿H҉A҉C҉K҉E҉R҉༄✿
-
-
 ## Technologies Used
 React.js: Front-end library for building user interfaces.
 React Router: For routing and navigation.
