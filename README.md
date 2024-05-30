@@ -61,10 +61,9 @@ To get started with the project, follow these steps:
    export default firebaseConfig;
 
 
-Start the development server:
+## Start the development server:
 
 bash
-Copy code
 npm start
 The app should now be running on http://localhost:3000.
 
@@ -87,46 +86,9 @@ Play continuous music using the embedded YouTube player.
 Project Structure
 Here's an overview of the project structure:
 
-css
-Copy code
-hotel-booking-website/
-│
-├── public/
-│   ├── index.html
-│   └── ...
-│
-├── src/
-│   ├── components/
-│   │   ├── Auth/
-│   │   │   ├── Login.js
-│   │   │   ├── Signup.js
-│   │   │   └── ...
-│   │   ├── Hotel/
-│   │   │   ├── HotelList.js
-│   │   │   ├── HotelDetails.js
-│   │   │   └── ...
-│   │   ├── Layout/
-│   │   │   ├── Header.js
-│   │   │   ├── Footer.js
-│   │   │   └── ...
-│   │   ├── Music/
-│   │   │   ├── BackgroundMusic.js
-│   │   │   ├── YouTubeFrame.js
-│   │   │   └── ...
-│   │   └── ...
-│   │
-│   ├── contexts/
-│   ├── hooks/
-│   ├── pages/
-│   ├── styles/
-│   │   └── ...
-│   ├── App.js
-│   ├── firebaseConfig.js
-│   └── index.js
-│
-├── .gitignore
-├── package.json
-└── README.md
+༄✿H҉A҉C҉K҉E҉R҉༄✿
+
+
 ## Technologies Used
 React.js: Front-end library for building user interfaces.
 React Router: For routing and navigation.
