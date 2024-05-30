@@ -57,11 +57,11 @@ const BookingForm = () => {
           </div>
         </div>
         <div className="input__group">
-          <button className="btn" id="apk" onClick={handleCheckIn}>Check In</button>
+          
         </div>
-        <div className="input__group input__btn">
-          <button className="btn" id="apk">CHECK OUT</button>
-          <button className="btn" id="apk"><NavLink to={"/BookingPage"} >CONTINUE</NavLink></button>
+        <div className="input__group ">
+          
+        <NavLink to={"/BookingPage"} ><button className="btn" id="apk">CONTINUE</button></NavLink>
         </div>
       </form>
 

@@ -1,49 +1,48 @@
-import React from "react";
-import "./ServicePage.css";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import './ServicePage.css'; // Import CSS file
 
-const ServicePage = () => {
+const Slider = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [
+    { title: 'Imperial Views', content: 'Enjoying the beauty of scenery across your room!' },
+    { title: 'Awesome Play Stadium', content: 'Enjoy the exercise force by playing games at stadium or Games corner instead of GYMS.' },
+    { title: 'Football and activities', content: 'Different Sports Challenges await the trail -->' },
+    { title: 'RoofTop Dinner', content: 'After a hustle of the day its time for music & ? Yes, Dinner at RoofTop' },
+    { title: 'Extravagant Food challenges', content: 'Delve into the amazing aromas and food dishes across your habitat.' }
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prevSlide) => (prevSlide === 0 ? slides.length - 1 : prevSlide - 1));
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="servicePage">
-       
-    <section className="service1" id="Service0">
-    <Link to="/" className="homeButton">Home</Link>
-      <h2>Our Services</h2>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
-        nulla vitae laoreet augue. Donec consectetur elit nec leo rutrum
-        placerat. Nulla facilisi eros in odio gravida blandit. Aenean eu ipsum
-        quam. Maecenas euismod magna eu consectetur laoreet.
-      </p>
-      <div className="services__container">
-        <div className="service1">
-          <h3>Spa Treatments</h3>
-          <p>
-            Relax and rejuvenate with our luxurious spa treatments designed to
-            melt away stress and leave you feeling refreshed.
-          </p>
+    <div className="slider">
+      {slides.map((slide, index) => (
+        <div key={index} className={`slide ${index === currentSlide ? 'current' : ''}`}>
+          <div className="content">
+            <h1>{slide.title}</h1>
+            <p>{slide.content}</p>
+          </div>
         </div>
-        <div className="service2">
-          <h3>Fine Dining</h3>
-          <p>
-            Indulge in exquisite culinary experiences at our award-winning
-            restaurants, featuring gourmet cuisine and impeccable service.
-          </p>
-        </div>
-        <div className="service3">
-          <h3>Fitness Center</h3>
-          <p>
-            Maintain your fitness routine with our state-of-the-art fitness
-            center, equipped with the latest cardio and weight training
-            equipment.
-          </p>
-        </div>
-        {/* Add more services as needed */}
+      ))}
+      <div className="buttons">
+        <button id="prev" onClick={prevSlide}><i className="fas fa-arrow-left"></i></button>
+        <button id="next" onClick={nextSlide}><i className="fas fa-arrow-right"></i></button>
       </div>
-    </section>
-    </div> 
+    </div>
   );
 };
 
-export default ServicePage;
+export default Slider;
