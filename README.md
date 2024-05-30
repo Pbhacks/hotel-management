@@ -2,6 +2,14 @@
 
 Welcome to the Hotel Booking Website project! This project showcases a modern hotel booking system built with React.js, React Router for navigation, Firebase for backend services, and CSS for styling. To make the user experience more engaging, it also includes background music and a YouTube frame for continuous music playback.
 
+
+
+![1](https://github.com/Pbhacks/hotel-management/assets/117024817/00d63614-d65d-4ff4-a0a5-5ca6172cea9a)
+<br>
+
+![2](https://github.com/Pbhacks/hotel-management/assets/117024817/3755d508-dc22-4924-8cf7-211a705f144c)
+
+
 ## Table of Contents
 
 - [Features](#features)
