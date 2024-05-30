@@ -32,7 +32,7 @@ const Header = () => {
         <a href="#contact"><li><button id="nb1">Music</button></li></a>
           <li><NavLink to="/ProfileSettings">Settings</NavLink></li>
         </ul>
-        <NavLink to={"/Login"}><button className="btn nav__btn" src="/Login">LOGIN</button></NavLink>
+        <NavLink to={"/Login"}><button className="bt64" src="/Login">LOGIN</button></NavLink>
         
       </nav>
       <div className="section__container header__container" id="home">

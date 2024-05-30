@@ -21,7 +21,7 @@ const Footer = () => {
             our curated selection of hotels, making every moment of your getaway
             truly extraordinary.
           </p>
-          <button className="btn">Book Now</button>
+          <a href="BookingPage"><button className="bt64">Book Now</button></a>
         </div>
         <div className="footer__col">
           <h4>QUICK LINKS</h4>
@@ -50,7 +50,7 @@ const Footer = () => {
           <div className="footer__socials">
             <a href="#"><img src="assets/facebook.png" alt="facebook" /></a>
             <a href="#"><img src="assets/instagram.png" alt="instagram" /></a>
-            <a href="#"><img src="assets/youtube.png" alt="youtube" /></a>
+            <a href="https://youtu.be/97n53FxlCnU?list=TLGGA8qVTshFft0zMDA1MjAyNA" target="_blank"><img src="assets/youtube.png" alt="youtube" /></a>
             <a href="#"><img src="assets/twitter.png" alt="twitter" /></a>
           </div>
         </div>

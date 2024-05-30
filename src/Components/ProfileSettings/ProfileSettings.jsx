@@ -106,7 +106,8 @@ function ProfileSettings() {
   return (
     <div
       style={{
-        backgroundImage: 'linear-gradient(to bottom right, #dcd3c6, #e0d3c2, #e4d5ba, #eaded9, #f5e9ea)',
+        background: "url('https://images6.alphacoders.com/132/1329272.png') no-repeat ",
+        backgroundSize: 'cover',
         height: '100vh',
         width: '100vw',
         padding: '40px',

@@ -12,7 +12,7 @@ const Explore = () => {
         <div className="explore__content">
           <p className="section__description">10th MAR 2023</p>
           <h4>A New Menu Is Available In Our Hotel.</h4>
-          <button className="btn"><NavLink to="/Menu">Continue</NavLink></button>
+          <NavLink to="/Menu"><button className="btn">Continue</button></NavLink>
         </div>
       </div>
     </section>
