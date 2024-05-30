@@ -29,8 +29,9 @@ const Header = () => {
         <NavLink to="/ServicePage"><li>Services</li></NavLink>
         <a href="#explore"><li>Explore</li></a>
         <a href="#contact"><li>Contact</li></a>
+        <NavLink to="/ProfileSettings"><li>Settings</li></NavLink>
         <a href="#contact"><li><button id="nb1">Music</button></li></a>
-          <li><NavLink to="/ProfileSettings">Settings</NavLink></li>
+        
         </ul>
         <NavLink to={"/Login"}><button className="bt64" src="/Login">LOGIN</button></NavLink>
         
