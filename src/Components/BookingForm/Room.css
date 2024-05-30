@@ -1,0 +1,235 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.section__container {
+  position: relative;
+  padding: 4rem 2rem;
+}
+
+.room__container {
+  background-image: url('./3.gif');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 900px;
+  margin: 0 auto;
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.room__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section__subheader {
+  font-size: 1.5rem;
+  color: black;
+}
+
+.section__header {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  color: white;
+}
+
+.room__grid {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  margin-top: 4rem;
+}
+
+.room__card {
+  position: relative;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 100px;
+}
+
+.room__card__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.room__card__icons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+
+.room__card__icons span {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 1.5rem;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+  color: #f472b6;
+  cursor: pointer;
+}
+
+.room__card__details {
+  padding: 1rem;
+}
+
+.room__card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: peach;
+}
+
+.room__card p {
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.room__card h5 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}
+
+.room__card h5 span {
+  font-size: 1.1rem;
+  color: red;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.info__container, .contact__container {
+  background: url('2.gif') center/cover no-repeat fixed;
+
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: large;
+  font-style: italic;
+  font-display: swap;
+  font-stretch: expanded;
+  font-feature-settings: "abvm";
+}
+
+.info__container h2, .contact__container h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #c49999;
+}
+
+.info__container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info__container ul li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.contact__form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact__form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.contact__form input, .contact__form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact__form button {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button-40 {
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
+  border: .25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+  text-shadow: 0 0 .5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+  }
+
+.button-40::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: .7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+}
+
+.button-40:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+}
+
+.button-40:active {
+  box-shadow: 0 0 0.6em .25em var(--glow-color),
+        0 0 2.5em 2em var(--glow-spread-color),
+        inset 0 0 .5em .25em var(--glow-color);
+}
