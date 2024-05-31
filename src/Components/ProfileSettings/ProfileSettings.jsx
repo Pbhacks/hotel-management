@@ -108,12 +108,12 @@ function ProfileSettings() {
       style={{
         background: "url('https://images6.alphacoders.com/132/1329272.png') no-repeat ",
         backgroundSize: 'cover',
-        height: '100vh',
         width: '100vw',
         padding: '40px',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        
       }}
     >
       <div

@@ -115,7 +115,7 @@ const LoginForm = () => {
 
 
   return (
-
+    <div className='epik'>
     <div className={`container ${isSignUp ? 'right-panel-active' : ''}`} id="container">
        
       <div className="form-container sign-up-container">
@@ -165,6 +165,7 @@ const LoginForm = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

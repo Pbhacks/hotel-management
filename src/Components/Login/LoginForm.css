@@ -8,11 +8,9 @@
   --gradient: linear-gradient(135deg, var(--main-color), var(--secondary-color));
 }
 
-* {
-  box-sizing: border-box;
-}
 
-body {
+
+.epik {
   background: black;
   font-family: "Nunito", sans-serif;
   display: flex;
@@ -22,10 +20,6 @@ body {
   min-height: 100vh;
   margin: 1rem 0;
 }
-
-
-
-
 
 .f-h1 {
   font-weight: bold;

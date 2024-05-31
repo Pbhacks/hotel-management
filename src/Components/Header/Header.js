@@ -16,7 +16,7 @@ const Header = () => {
       <nav>
         <div className="nav__bar">
           <div className="logo">
-            <a href="#"><img className="hmt" src="assets/logo.jpg" alt="logo" /></a>
+            <a href="http://culturalxchange.jimdosite.com"><img className="hmt" src="assets/logo.jpg" alt="logo" /></a>
           </div>
           <div className="nav__menu__btn" id="menu-btn" onClick={toggleMenu}>
             {isOpen ? <RiCloseLine /> : <RiMenuLine />}

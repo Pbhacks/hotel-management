@@ -13,6 +13,9 @@ const Footer = () => {
     <footer className="footer" id="contact">
       <div className="section__container footer__container">
         <div className="footer__col">
+        <div>
+      
+      </div>
           <div className="logos">
             <a href="#home"><img className="hmt" src="assets/logo.jpg" alt="logo" /></a>
           </div>
@@ -59,6 +62,7 @@ const Footer = () => {
       <div className="footer__bar">
         <marquee>Copyright © 2024 pbHACKS ~ Dr.Priyant, All rights reserved.</marquee>
       </div>
+      
       <iframe
         width="560"
         height="315"
