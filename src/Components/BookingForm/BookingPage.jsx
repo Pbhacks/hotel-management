@@ -79,7 +79,7 @@ const Room = () => {
           </div>
           <div className="room__card">
             <div className="room__card__image">
-              <img src="assets/room-4.jpg" alt="Presidential Suite" />
+              <img src="https://i.digsdigs.com/big-apartment-interior-design-in-tokyo-1-554x248.jpg" alt="Presidential Suite" />
               <div className="room__card__icons">
                 <span><i className="ri-heart-fill"></i></span>
                 <span><i className="ri-paint-fill"></i></span>
@@ -95,7 +95,7 @@ const Room = () => {
           </div>
         </div>
       </section>
-      {/* Additional content below */}
+    
       <section className="section__container info__container">
         
         <h2>Why Choose Us</h2>

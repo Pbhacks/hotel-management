@@ -44,6 +44,7 @@ const Footer = () => {
         </div>
         <div className="footer__col">
           <h4>CONTACT US</h4>
+          <marquee>RCOP Group</marquee>
           <ul className="footer__links">
             <li><a href="#">rcop@info.com</a></li>
           </ul>
@@ -56,7 +57,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer__bar">
-        Copyright © 2024 pbHACKS ~ Dr.Priyant, All rights reserved.
+        <marquee>Copyright © 2024 pbHACKS ~ Dr.Priyant, All rights reserved.</marquee>
       </div>
       <iframe
         width="560"
